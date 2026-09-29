@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Abigail ❤️</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+        overflow: hidden;
+    }
+
+    .hearts span {
+        position: fixed;
+        color: rgba(255, 80, 130, 0.35);
+        animation: float 7s linear infinite;
+        font-size: 25px;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        30% { opacity: 1; }
+        to {
+            transform: translateY(-10vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .container {
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .envelope {
+        background: white;
+        padding: 45px 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        animation: appear 1.2s ease;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+        color: #e6396f;
+        margin-bottom: 10px;
+        font-size: 34px;
+    }
+
+    .subtitle {
+        color: #888;
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+
+    .letter {
+        text-align: left;
+        color: #444;
+        line-height: 1.8;
+        font-size: 17px;
+    }
+
+    .letter p {
+        margin-bottom: 18px;
+    }
+
+    .highlight {
+        color: #e6396f;
+        font-weight: bold;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 13px 28px;
+        border: none;
+        border-radius: 30px;
+        background: #e6396f;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.06);
+        background: #d6285d;
+    }
+
+    #finalMessage {
+        display: none;
+        margin-top: 25px;
+        color: #e6396f;
+        font-size: 19px;
+        line-height: 1.6;
+        animation: appear 0.8s ease;
+    }
+
+    .signature {
+        text-align: right;
+        margin-top: 25px;
+        font-style: italic;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span style="left:10%; animation-delay:0s;">♥</span>
+    <span style="left:25%; animation-delay:2s;">♡</span>
+    <span style="left:45%; animation-delay:4s;">♥</span>
+    <span style="left:65%; animation-delay:1s;">♡</span>
+    <span style="left:85%; animation-delay:3s;">♥</span>
+</div>
+
+<div class="container">
+
+    <div class="envelope">
+
+        <h1>For Abigail ❤️</h1>
+
+        <div class="subtitle">
+            There are some things I really wanted to say...
+        </div>
+
+        <div class="letter">
+
+            <p>Dear Abigail,</p>
+
+            <p>
+                I'm really sorry for the things I've done and for the times
+                I've hurt you. I know saying "sorry" doesn't magically fix
+                everything, and I don't expect it to.
+            </p>
+
+            <p>
+                I just want you to know that
+                <span class="highlight">I genuinely care about you.</span>
+                I don't want our relationship to end because of my mistakes.
+            </p>
+
+            <p>
+                I'm not going to promise that I'll suddenly become perfect,
+                because I know that's not realistic. But I can promise that
+                <span class="highlight">I'll try my best to do better.</span>
+                I'll listen more, understand you better, and work on the
+                things I've been doing wrong.
+            </p>
+
+            <p>
+                I don't want to force you to stay or make you feel like you
+                have to forgive me immediately. I just want a chance to show
+                you that I can learn from my mistakes.
+            </p>
+
+            <p>
+                If there's still a little part of you that wants us to work,
+                I'd really like to try again — properly this time.
+            </p>
+
+            <p>
+                Whatever you decide, I just wanted you to know how much
+                you mean to me.
+            </p>
+
+            <div class="signature">
+                I'm sorry, Abigail ❤️<br>
+                — Evin
+            </div>
+
+        </div>
+
+        <button onclick="showMessage()">
+            One more thing...
+        </button>
+
+        <div id="finalMessage">
+            I don't want a perfect relationship.<br>
+            I just want us to keep trying, together. ❤️
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("finalMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
